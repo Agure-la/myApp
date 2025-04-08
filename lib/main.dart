@@ -20,8 +20,10 @@ class MyApp extends StatelessWidget {
             bottom: TabBar(tabs: [
               Tab(text: 'Login'),
               Tab(text: 'Signup'),
-            ],),
+            ],
+            ),
           ),
+          backgroundColor: Colors.grey,
           body: TabBarView(
               children: [
                 LoginCard(),
