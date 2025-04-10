@@ -14,6 +14,14 @@ class LandingPage extends StatelessWidget {
 
 Widget _buildHeader() {
   return Container(
-
+    padding: EdgeInsets.all(16.0),
+    alignment: Alignment.center,
+    child: Text(
+      'Welcome to KK Fitness',
+      style: TextStyle(
+        fontSize: 24.0,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
   );
 }
