@@ -66,3 +66,11 @@ Widget _buildFeaturesSection(){
     ),
   );
 }
+
+Widget _buildFeatureItem(String title, String description) {
+  return ListTile(
+    leading: Icon(Icons.star),
+    title: Text(title),
+    subtitle: Text(description),
+  );
+}
