@@ -120,3 +120,14 @@ ThemeData _themeData = ThemeData(
   hintColor: Colors.green,
   fontFamily: 'Roboto',
 );
+
+TextStyle _headerStyle = TextStyle(
+  fontSize: 24.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);
+
+TextStyle _bodyStyle = TextStyle(
+  fontSize: 16.0,
+  color: Colors.grey,
+);
