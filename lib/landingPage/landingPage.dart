@@ -5,6 +5,9 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('KK Fitnes'),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -36,12 +39,13 @@ Widget _buildHeader() {
 
 Widget _buildHeroSection() {
   return Container(
+      color: Colors.grey[200],
     padding: EdgeInsets.all(16.0),
     alignment: Alignment.center,
     child: Column(
       children: [
         Image.asset(
-          'assets/images/fit.jpeg',
+          'assets/fitne.jpg ',
           height: 200.0,
         ),
         SizedBox(height: 16.0),
@@ -50,6 +54,7 @@ Widget _buildHeroSection() {
           style: TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
+            color: Colors.blue,
           ),
         ),
         SizedBox(height: 8.0),

@@ -14,26 +14,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: _themeData,
       debugShowCheckedModeBanner: false,
-      home: DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text('Login & Signup'),
-            bottom: TabBar(tabs: [
-              Tab(text: 'Login'),
-              Tab(text: 'Signup'),
-            ],
-            ),
-          ),
-          backgroundColor: Colors.grey,
-          body: TabBarView(
-              children: [
-                LoginCard(),
-                SignupCard(),
-              ],
-          ),
-        ),
-      ),
+      home: LandingPage(),
+      // home: DefaultTabController(
+      //   length: 2,
+      //   child: Scaffold(
+      //     appBar: AppBar(
+      //       title: Text('Login & Signup'),
+      //       bottom: TabBar(tabs: [
+      //         Tab(text: 'Login'),
+      //         Tab(text: 'Signup'),
+      //       ],
+      //       ),
+      //     ),
+      //     backgroundColor: Colors.grey,
+      //     body: TabBarView(
+      //         children: [
+      //           LoginCard(),
+      //           SignupCard(),
+      //         ],
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
