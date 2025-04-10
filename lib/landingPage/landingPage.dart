@@ -53,3 +53,16 @@ Widget _buildHeroSection() {
     ),
   );
 }
+
+Widget _buildFeaturesSection(){
+  return Container(
+    padding: EdgeInsets.all(16.0),
+    child: Column(
+      children: [
+        _buildFeatureItem('Yoga', 'Lorem ipsum dolor sit amet.'),
+        _buildFeatureItem('Zomba', 'Consectetur adipiscing elit.'),
+        _buildFeatureItem('Body Builder', 'Vivamus eget nulla nec libero.'),
+      ],
+    ),
+  );
+}
