@@ -74,3 +74,12 @@ Widget _buildFeatureItem(String title, String description) {
     subtitle: Text(description),
   );
 }
+
+Widget _buildCTAButton(){
+  return ElevatedButton(
+      onPressed: () {
+        
+      },
+    child: Text('Get Started'),
+  );
+}
