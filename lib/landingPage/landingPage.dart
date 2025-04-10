@@ -91,3 +91,15 @@ Widget _buildCTAButton(){
     child: Text('Get Started'),
   );
 }
+
+Widget build(BuildContext context){
+  return LayoutBuilder(
+    builder: (BuildContext context, BoxConstraints constraints) {
+      if(constraints.maxWidth > 600) {
+        return _buildWideLayout();
+      } else {
+        return _buildDefaultLayout();
+      }
+    },
+  );
+}
