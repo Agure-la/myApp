@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'landingPage/landingPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: _themeData,
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 2,
@@ -112,3 +114,9 @@ class SignupCard extends StatelessWidget {
     );
   }
 }
+
+ThemeData _themeData = ThemeData(
+  primaryColor: Colors.blue,
+  hintColor: Colors.green,
+  fontFamily: 'Roboto',
+);
