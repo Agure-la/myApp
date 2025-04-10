@@ -5,8 +5,16 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _buildHeader(),
+            _buildHeroSection(),
+            _buildFeaturesSection(),
+            _buildCTAButton(),
+          ],
+        ),
       ),
     );
   }
