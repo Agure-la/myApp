@@ -88,7 +88,21 @@ Widget _buildCTAButton(){
       onPressed: () {
         
       },
-    child: Text('Get Started'),
+     style: ElevatedButton.styleFrom(
+       backgroundColor: Colors.blue,
+       padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+       shape: RoundedRectangleBorder(
+         borderRadius: BorderRadius.circular(8.0)
+       ),
+     ),
+    child: Text(
+        'Get Started',
+      style: TextStyle(
+        fontSize: 18.0,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+    ),
   );
 }
 
