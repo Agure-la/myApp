@@ -115,5 +115,19 @@ Widget _buildWideLayout() {
         _buildCTAButton(),
       ],
     ),
-  ),
+  );
+}
+
+Widget _buildDefaultLayout() {
+  return SingleChildScrollView(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _buildHeader(),
+        _buildHeroSection(),
+        _buildFeaturesSection(),
+        _buildCTAButton(),
+      ],
+    ),
+  );
 }
