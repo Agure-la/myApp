@@ -103,3 +103,17 @@ Widget build(BuildContext context){
     },
   );
 }
+
+Widget _buildWideLayout() {
+  return Container(
+    width: 400.0,
+    child: Column(
+      children: [
+        _buildHeader(),
+        _buildHeroSection(),
+        _buildFeaturesSection(),
+        _buildCTAButton(),
+      ],
+    ),
+  ),
+}
