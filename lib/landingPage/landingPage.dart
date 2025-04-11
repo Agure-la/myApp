@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_login/auth/signup.dart';
+
+import '../auth/login.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -15,7 +18,7 @@ class LandingPage extends StatelessWidget {
             _buildHeader(),
             _buildHeroSection(),
             _buildFeaturesSection(),
-            _buildCTAButton(),
+            _buildCTAButton(context),
           ],
         ),
       ),
@@ -88,25 +91,59 @@ Widget _buildFeatureItem(String title, String description) {
   );
 }
 
-Widget _buildCTAButton(){
-  return ElevatedButton(
-      onPressed: () {
-        
-      },
-     style: ElevatedButton.styleFrom(
-       backgroundColor: Colors.blue,
-       padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
-       shape: RoundedRectangleBorder(
-         borderRadius: BorderRadius.circular(8.0)
-       ),
-     ),
-    child: Text(
-        'Get Started',
-      style: TextStyle(
-        fontSize: 18.0,
-        fontWeight: FontWeight.bold,
-        color: Colors.white,
-      ),
+Widget _buildCTAButton(BuildContext context){
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+                context,
+              MaterialPageRoute(builder: (context) => LoginCard()),
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+          ),
+          child: Text(
+            'Get Started',
+            style: TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        SizedBox(height: 16.0),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SignupCard()),
+            );
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green,
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+          ),
+          child: Text(
+            'Sign Up',
+            style: TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ],
     ),
   );
 }
@@ -115,15 +152,15 @@ Widget build(BuildContext context){
   return LayoutBuilder(
     builder: (BuildContext context, BoxConstraints constraints) {
       if(constraints.maxWidth > 600) {
-        return _buildWideLayout();
+        return _buildWideLayout(context);
       } else {
-        return _buildDefaultLayout();
+        return _buildDefaultLayout(context);
       }
     },
   );
 }
 
-Widget _buildWideLayout() {
+Widget _buildWideLayout(BuildContext context) {
   return Container(
     width: 400.0,
     child: Column(
@@ -131,13 +168,13 @@ Widget _buildWideLayout() {
         _buildHeader(),
         _buildHeroSection(),
         _buildFeaturesSection(),
-        _buildCTAButton(),
+        _buildCTAButton(context),
       ],
     ),
   );
 }
 
-Widget _buildDefaultLayout() {
+Widget _buildDefaultLayout(BuildContext context) {
   return SingleChildScrollView(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -145,7 +182,7 @@ Widget _buildDefaultLayout() {
         _buildHeader(),
         _buildHeroSection(),
         _buildFeaturesSection(),
-        _buildCTAButton(),
+        _buildCTAButton(context),
       ],
     ),
   );
