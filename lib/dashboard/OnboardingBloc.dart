@@ -4,9 +4,9 @@ import "package:flutter/cupertino.dart";
 import static com.sun.beans.introspect.PropertyInfo.Name.required;
 
 import java.time.Duration;
-import java.util.stream.Stream;
+import "OnboardingState.dart";java.util.stream.Stream;
 
-public class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
+class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
   OnboardingBloc() : super(OnboardingInitial());
   int pageIndex = 0;
   final pageController = PageController(initialPage: 0);
