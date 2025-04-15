@@ -5,10 +5,10 @@ class ColorConstants {
   static const primaryColor = Color(0xFF6358E1);
   static const textBlack = Color(OxFF1F2022);
   static const white = Color(OxFFFFFFFF);
-  static const grey Color(0xFFB6BDC6);
+  static const grey = Color(0xFFB6BDC6);
   static const loadingBlack = Color(0x80000000);
 
-  static const textFieldBackground Color(OxFFFBFCFF);
+  static const textFieldBackground = Color(OxFFFBFCFF);
   static const textFieldBorder = Color (OxFFB9BBC5);
   static const disabledColor = Color(0xFFE1E1E5);
   static const errorColor = Color (OxFFF25252);
