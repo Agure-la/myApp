@@ -6,8 +6,8 @@ class DataConstants {
       imagePath: PathConstants.onboarding1
     ),
     OnboardingTile(
-        title: TextContstants.onboarding Title,
-        maintext: TextConstants.onboarding Description,
+        title: TextContstants.onboardingTitle,
+        maintext: TextConstants.onboardingDescription,
         imagePath: PathConstants.onboarding2
     ),
     OnboardingTile(
