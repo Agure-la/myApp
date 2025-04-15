@@ -1,0 +1,2 @@
+C:/Users/aodeny/my_login/android/app/.cxx/Debug/4z3u4t53/x86/CMakeFiles/edit_cache.dir
+C:/Users/aodeny/my_login/android/app/.cxx/Debug/4z3u4t53/x86/CMakeFiles/rebuild_cache.dir
